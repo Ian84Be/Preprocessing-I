@@ -142,6 +142,20 @@ h2 {
   color: gray;
   padding: 20px;
 }
+ul {
+  list-style-type: circle;
+}
+ul li {
+  padding: 1rem;
+  line-height: 1.25;
+}
+ul li:hover {
+  color: red;
+}
+b {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
 .container {
   border-left: 1px solid black;
   border-right: 1px solid black;
