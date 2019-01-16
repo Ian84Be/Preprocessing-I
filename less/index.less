@@ -60,6 +60,11 @@ h1 {
 	font-size:4rem;
 	// margin-bottom:@butt-pillow;
 }
+h2 {
+	font-size:2rem;
+	color:gray;
+	padding:20px;
+}
 
 // VARIABLES
 @butt-pillow:20px;
@@ -84,6 +89,8 @@ h1 {
 header {
 	width:100%;
 	// border:1px solid yellow;
+	border-bottom:2px dashed black;
+	padding-bottom: @butt-pillow;
 	.column-center();
 	contact {
 		// border:1px solid red;
@@ -101,15 +108,14 @@ header {
 	nav {
 		// border:1px solid green;
 		display:flex;
-		width:50%;
+		width:100%;
 		justify-content: space-around;
 	}
 	a {
-		color:indigo;
+		color:black;
 		&:hover {text-decoration:none;}
 	}
 }
-
 .bigredbrackets {
 	// border:1px solid black;
 	font-size:10rem;
@@ -117,4 +123,13 @@ header {
 	margin-bottom:@butt-pillow;
 }
 
+// MAIN CONTENT
+article {
+	// border:1px solid red;
+	border-bottom:1px dashed black;
+	width:77%;
+	p {
+		margin-bottom:@butt-pillow;
+	}
+}
 
