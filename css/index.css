@@ -135,5 +135,48 @@ body {
   height: 100%;
 }
 h1 {
-  font-size: 3rem;
+  font-size: 4rem;
+}
+.container {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  margin: 0 auto;
+  max-width: 777px;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header contact p {
+  padding: 1px;
+  margin: 3px;
+  line-height: 2rem;
+  font-weight: bold;
+}
+header nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+}
+header a {
+  color: indigo;
+}
+header a:hover {
+  text-decoration: none;
+}
+.bigredbrackets {
+  font-size: 10rem;
+  color: red;
+  margin-bottom: 20px;
 }
