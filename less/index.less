@@ -58,7 +58,7 @@ html, body {
 
 h1 {
 	font-size:4rem;
-	// margin-bottom:@butt-pillow;
+	.butt-pillow();
 }
 h2 {
 	font-size:2rem;
@@ -104,13 +104,19 @@ b {
 }
 
 // VARIABLES
-@butt-pillow:20px;
+@myColor:red;
+@myFont: 'Aleo', 'Times', serif;
 
 // MIXINS
 .column-center() {
 	display:flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.butt-pillow() {
+	padding-bottom:20px;
+	margin-bottom:20px;
 }
 
 // STYLES BEGIN
@@ -120,20 +126,26 @@ b {
 	margin:0 auto;
 	max-width:777px;
 	padding:3%;
+	font-family: @myFont;
 	.column-center();
-}
+
+	@mobile(max-width:500px) {
+		max-width:500px;
+	}
+
 
 header {
 	width:100%;
 	// border:1px solid yellow;
 	border-bottom:2px dashed black;
-	padding-bottom: @butt-pillow;
+	.butt-pillow();
 	.column-center();
 	contact {
 		// border:1px solid red;
 		display:flex;
 		justify-content:center;
 		align-items: center;
+		.butt-pillow();
 		p {
 			// border:1px solid cyan;
 			padding:1px;
@@ -150,14 +162,13 @@ header {
 	}
 	a {
 		color:black;
-		&:hover {text-decoration:none;}
+		&:hover {text-decoration:none;color:@myColor;}
 	}
 }
 .bigredbrackets {
 	// border:1px solid black;
 	font-size:10rem;
-	color:red;
-	margin-bottom:@butt-pillow;
+	color:@myColor;
 }
 
 // MAIN CONTENT
@@ -166,7 +177,7 @@ article {
 	border-bottom:1px dashed black;
 	width:77%;
 	p {
-		margin-bottom:@butt-pillow;
+		.butt-pillow();
 	}
 }
-
+} //END OF MAIN CONTAINER NESTING

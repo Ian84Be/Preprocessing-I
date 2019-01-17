@@ -136,6 +136,8 @@ body {
 }
 h1 {
   font-size: 4rem;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 h2 {
   font-size: 2rem;
@@ -182,49 +184,57 @@ b {
   margin: 0 auto;
   max-width: 777px;
   padding: 3%;
+  font-family: 'Aleo', 'Times', serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header {
+@mobile (max-width:500px) {
+  max-width: 500px;
+}
+.container header {
   width: 100%;
   border-bottom: 2px dashed black;
   padding-bottom: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header contact {
+.container header contact {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-header contact p {
+.container header contact p {
   padding: 1px;
   margin: 3px;
   line-height: 2rem;
   font-weight: bold;
 }
-header nav {
+.container header nav {
   display: flex;
   width: 100%;
   justify-content: space-around;
 }
-header a {
+.container header a {
   color: black;
 }
-header a:hover {
+.container header a:hover {
   text-decoration: none;
+  color: red;
 }
-.bigredbrackets {
+.container .bigredbrackets {
   font-size: 10rem;
   color: red;
-  margin-bottom: 20px;
 }
-article {
+.container article {
   border-bottom: 1px dashed black;
   width: 77%;
 }
-article p {
+.container article p {
+  padding-bottom: 20px;
   margin-bottom: 20px;
 }
