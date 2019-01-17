@@ -1,4 +1,3 @@
-// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,6 +53,153 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+h1 {
+	font-size:4rem;
+	margin-bottom:10px;
+}
+h2 {
+	font-size:2rem;
+	color:gray;
+	padding:20px 0 20px 20px;
+}
+h3 {
+	font-size:1.25rem;
+}
+h4 {
+	font-size:1rem;
+	font-style: italic;
+	padding:1px;
+}
+
+ul {
+	list-style-type:circle;
+	// list-style-position: inside;
+	li {
+		padding:1rem;
+		line-height:1.25;
+		&:hover {color:red;}
+	}
+}
+//FOR EXP SECTION
+#exp ul {
+	// border:1px solid red;
+	flex-direction: column;
+	list-style-type: square;
+	li {
+		padding:1rem;
+		line-height:1.25;
+		p {
+			font-size:0.75rem;
+			padding:1px;
+		}
+	}
+}
+
+b {
+	font-weight:bold;
+	font-size: 1.25rem;
+}
+
+// VARIABLES
+@myColor:red;
+@myFont: 'Aleo', 'Times', serif;
+
+// MIXINS
+.column-center() {
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.butt-pillow() {
+	padding-bottom:20px;
+	margin-bottom:20px;
+}
+
+// STYLES BEGIN
+.container {
+	border-left:1px solid black;
+	border-right:1px solid black;
+	margin:0 auto;
+	max-width:777px;
+	padding:3%;
+	font-family: @myFont;
+	.column-center();
+
+	@mobile(max-width:500px) {
+		max-width:500px;
+	}
+
+
+header {
+	width:100%;
+	// border:1px solid yellow;
+	.column-center();
+	contact {
+		// border:1px solid red;
+		display:flex;
+		justify-content:center;
+		align-items: center;
+		margin-bottom:20px;
+		p {
+			// border:1px solid cyan;
+			padding:1px;
+			margin:3px;
+			line-height: 2rem;
+			font-weight:bold;
+		}
+	}
+	nav {
+		// border:1px solid green;
+		border-bottom:2px dashed black;
+		display:flex;
+		width:100%;
+		justify-content: space-around;
+		padding-bottom:20px;
+		@media (max-width:500px) {
+			border-top:2px dashed black;
+			padding-top:20px;
+			margin-top:-20px;
+			flex-direction:column;
+			flex-wrap:wrap;
+			align-items: center;
+
+			a {
+				@media (max-width:500px) {
+					font-size:2rem;
+					padding:11px 0;
+				}
+			}
+		}
+	}
+	a {
+		// border:1px solid cyan;
+		color:black;
+		&:hover {text-decoration:none;color:@myColor;}
+	}
+}
+.bigredbrackets {
+	// border:1px solid black;
+	font-size:10rem;
+	color:@myColor;
+}
+
+// MAIN CONTENT
+article {
+	// border:1px solid red;
+	border-bottom:1px dashed black;
+	width:77%;
+	p {
+		.butt-pillow();
+	}
+	a {
+		font-size:0.55rem;
+		color:@myColor;
+		text-decoration:none;
+		&:hover {;color:cyan}
+	}
+}
+} //END OF MAIN CONTAINER NESTING
