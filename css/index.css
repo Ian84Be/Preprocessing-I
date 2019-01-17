@@ -142,6 +142,14 @@ h2 {
   color: gray;
   padding: 20px;
 }
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1rem;
+  font-style: italic;
+  padding: 1px;
+}
 ul {
   list-style-type: circle;
 }
@@ -151,6 +159,18 @@ ul li {
 }
 ul li:hover {
   color: red;
+}
+#exp ul {
+  flex-direction: column;
+  list-style-type: square;
+}
+#exp ul li {
+  padding: 1rem;
+  line-height: 1.25;
+}
+#exp ul li p {
+  font-size: 0.75rem;
+  padding: 1px;
 }
 b {
   font-weight: bold;

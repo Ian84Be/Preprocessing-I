@@ -65,13 +65,36 @@ h2 {
 	color:gray;
 	padding:20px;
 }
+h3 {
+	font-size:1.25rem;
+}
+h4 {
+	font-size:1rem;
+	font-style: italic;
+	padding:1px;
+}
 
 ul {
 	list-style-type:circle;
+	// list-style-position: inside;
 	li {
 		padding:1rem;
 		line-height:1.25;
 		&:hover {color:red;}
+	}
+}
+//FOR EXP SECTION
+#exp ul {
+	// border:1px solid red;
+	flex-direction: column;
+	list-style-type: square;
+	li {
+		padding:1rem;
+		line-height:1.25;
+		p {
+			font-size:0.75rem;
+			padding:1px;
+		}
 	}
 }
 
