@@ -58,12 +58,12 @@ html, body {
 
 h1 {
 	font-size:4rem;
-	.butt-pillow();
+	margin-bottom:10px;
 }
 h2 {
 	font-size:2rem;
 	color:gray;
-	padding:20px;
+	padding:20px 0 20px 20px;
 }
 h3 {
 	font-size:1.25rem;
@@ -137,15 +137,13 @@ b {
 header {
 	width:100%;
 	// border:1px solid yellow;
-	border-bottom:2px dashed black;
-	.butt-pillow();
 	.column-center();
 	contact {
 		// border:1px solid red;
 		display:flex;
 		justify-content:center;
 		align-items: center;
-		.butt-pillow();
+		margin-bottom:20px;
 		p {
 			// border:1px solid cyan;
 			padding:1px;
@@ -156,11 +154,29 @@ header {
 	}
 	nav {
 		// border:1px solid green;
+		border-bottom:2px dashed black;
 		display:flex;
 		width:100%;
 		justify-content: space-around;
+		padding-bottom:20px;
+		@media (max-width:500px) {
+			border-top:2px dashed black;
+			padding-top:20px;
+			margin-top:-20px;
+			flex-direction:column;
+			flex-wrap:wrap;
+			align-items: center;
+
+			a {
+				@media (max-width:500px) {
+					font-size:2rem;
+					padding:11px 0;
+				}
+			}
+		}
 	}
 	a {
+		// border:1px solid cyan;
 		color:black;
 		&:hover {text-decoration:none;color:@myColor;}
 	}
@@ -178,6 +194,12 @@ article {
 	width:77%;
 	p {
 		.butt-pillow();
+	}
+	a {
+		font-size:0.55rem;
+		color:@myColor;
+		text-decoration:none;
+		&:hover {;color:cyan}
 	}
 }
 } //END OF MAIN CONTAINER NESTING
